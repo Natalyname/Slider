@@ -1,0 +1,59 @@
+.slider {
+    height: 100vh; /*чтобы был на всю высоту экрана*/
+    position: relative; /*чтобы разместить иконку загрузки и кнопки влево-вправо*/
+    overflow: hidden;
+}
+
+.slider-item {
+    width: 100%; /*чтобы слйды растягивались под размер слайдера*/
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.slider-item img {
+    width: 100%;
+    height: 100%;
+    display: block; /*делаем картинки блочными, чтобы не было полоски снизу картинки*/
+    object-fit: cover;
+}
+
+.hidden-slide {
+    visibility: hidden;
+}
+
+.fas.fa-spinner.fa-spin {
+    font-size: 50px;
+    color: #bbbbbb;
+    position: absolute;
+    left: calc(50% - 25px);
+    top: calc(50% - 25px);
+}
+
+
+.slider-leftArrow, .slider-rightArrow {
+    position: absolute;
+    top: 47%;
+    z-index: 3;
+    color: #bbbbbb;
+    cursor: pointer;
+    font-size: 50px;
+}
+
+.slider-leftArrow {
+    left: 5%;
+    background-image: url(../images/left-button.png);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.slider-rightArrow {
+    left: 90%;
+    background-image: url(../images/right-button.png);
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
